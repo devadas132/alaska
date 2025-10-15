@@ -30,6 +30,8 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="assets/css/theme.css" rel="stylesheet" />
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   </head>
 
@@ -135,6 +137,85 @@
       </section>
 
 
+<section class="mt-1 py-0">    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 py-5 py-xl-5 py-xxl-7">
+        <div class="pt-5">
+          <form class="row g-4 mt-5">
+
+            <!-- "From" location input -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputAddress1">Location</label>
+                <input class="form-control input-box form-voyage-control" id="inputAddress1" type="text" placeholder="Location" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-map-marker-alt"></i></span>
+              </div>
+            </div>
+
+            <!-- Check-in Date input -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <input class="form-control input-box form-voyage-control" id="inputdateOne" type="text" placeholder="Check-in" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
+              </div>
+            </div>
+
+            <!-- Check-out Date input -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <input class="form-control input-box form-voyage-control" id="inputDateTwo" type="text" placeholder="Check-out" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-calendar"></i></span>
+              </div>
+            </div>
+
+            <!-- Adults input -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputAdults">Adults</label>
+                <input class="form-control input-box form-voyage-control" id="inputAdults" type="number" placeholder="Adults" min="0" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"></i></span>
+              </div>
+            </div>
+
+            <!-- Children input -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputChildren">Children</label>
+                <input class="form-control input-box form-voyage-control" id="inputChildren" type="number" placeholder="Children" min="0" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-child"></i></span>
+              </div>
+            </div>
+
+            <!-- Room Type Dropdown -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputRoomType">Room Type</label>
+                <select class="form-select form-voyage-select input-box" id="inputRoomType">
+                  <option selected="selected">Any Room</option>
+                  <option>Single Room</option>
+                  <option>Double Room</option>
+                  <option>Family Suite</option>
+                  <option>Luxury Suite</option>
+                  <option>Villa</option>
+                </select>
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-bed"></i></span>
+              </div>
+            </div>
+
+            <!-- Search Button -->
+            <div class="col-12 col-md-2">
+              <div class="d-flex align-items-end h-100">
+                <button class="btn btn-secondary w-100" type="submit">Search Resorts</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       <!-- ============================================-->
@@ -318,6 +399,27 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
+    <!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Initialize Flatpickr -->
+<script>
+  flatpickr("#inputdateOne", {
+    dateFormat: "Y-m-d",
+    altInput: true,
+    altFormat: "F j, Y",
+    allowInput: true,
+  });
+
+  flatpickr("#inputDateTwo", {
+    dateFormat: "Y-m-d",
+    altInput: true,
+    altFormat: "F j, Y",
+    allowInput: true,
+  });
+</script>
+
+
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
     <script src="vendors/is/is.min.js"></script>

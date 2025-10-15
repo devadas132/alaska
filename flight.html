@@ -30,6 +30,10 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="assets/css/theme.css" rel="stylesheet" />
+<!-- Flatpickr CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<!-- Flatpickr JS -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   </head>
 
@@ -143,6 +147,125 @@
 
 
       <!-- ============================================-->
+<section class="mt-1 py-0"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 py-5 py-xl-5 py-xxl-7">
+        <div class="pt-5">
+          <!-- Trip Type Selection -->
+          <div class="mb-4">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tripType" id="oneWay" value="oneWay" checked>
+              <label class="form-check-label" for="oneWay">One Way</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="tripType" id="roundTrip" value="roundTrip">
+              <label class="form-check-label" for="roundTrip">Round Trip</label>
+            </div>
+          </div>
+
+          <form class="row g-4 mt-3">
+            <!-- From -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputAddress1">From</label>
+                <input class="form-control input-box form-voyage-control" id="inputAddress1" type="text" placeholder="From where" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-map-marker-alt"></i></span>
+              </div>
+            </div>
+
+            <!-- To -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputAddress2">To</label>
+                <input class="form-control input-box form-voyage-control" id="inputAddress2" type="text" placeholder="To where" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-map-marker-alt"></i></span>
+              </div>
+            </div>
+
+<!-- Departure Date -->
+<div class="col-12 col-md-2">
+  <div class="input-group-icon">
+    <input class="form-control input-box form-voyage-control" 
+          id="inputDateOne" 
+          type="text" 
+          placeholder="Departure Date" />
+    <span class="nav-link-icon text-800 fs--1 input-box-icon">
+      <i class="fas fa-calendar"></i>
+    </span>
+  </div>
+</div>
+
+<!-- Return Date -->
+<div class="col-12 col-md-2" id="returnDateGroup">
+  <div class="input-group-icon">
+    <input class="form-control input-box form-voyage-control" 
+          id="inputDateTwo" 
+          type="text" 
+          placeholder="Return Date" />
+    <span class="nav-link-icon text-800 fs--1 input-box-icon">
+      <i class="fas fa-calendar"></i>
+    </span>
+  </div>
+</div>
+
+
+            <!-- Adults -->
+          <div class="col-12 col-md-2">
+            <div class="input-group-icon">
+              <label class="form-label visually-hidden" for="inputAdults">Adults</label>
+              <input class="form-control input-box form-voyage-control" id="inputAdults" type="number" placeholder="Adults" min="1" />
+              <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-user"></i></span>
+            </div>
+          </div>
+
+
+            <!-- Children -->
+            <div class="col-12 col-md-2">
+              <div class="input-group-icon">
+                <label class="form-label visually-hidden" for="inputChildren">Children</label>
+                <input class="form-control input-box form-voyage-control" id="inputChildren" type="number" placeholder="childrens" min="0" />
+                <span class="nav-link-icon text-800 fs--1 input-box-icon"><i class="fas fa-child"></i></span>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-12 col-md-2">
+              <div class="d-flex align-items-end h-100">
+                <button class="btn btn-secondary w-100" type="submit">Search Flights</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript to handle trip type toggle -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const oneWay = document.getElementById('oneWay');
+    const roundTrip = document.getElementById('roundTrip');
+    const returnDateGroup = document.getElementById('returnDateGroup');
+
+    function toggleReturnDate() {
+      if (oneWay.checked) {
+        returnDateGroup.style.display = 'none';
+      } else {
+        returnDateGroup.style.display = 'block';
+      }
+    }
+
+    oneWay.addEventListener('change', toggleReturnDate);
+    roundTrip.addEventListener('change', toggleReturnDate);
+
+    // Initialize on page load
+    toggleReturnDate();
+  });
+</script>
+
+
 
 
 
@@ -299,6 +422,20 @@
     <!-- ===============================================-->
 
 
+<script>
+  // Flatpickr initialization
+  flatpickr("#inputDateOne", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d"
+  });
+
+  flatpickr("#inputDateTwo", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d"
+  });
+</script>
 
 
     <!-- ===============================================-->
