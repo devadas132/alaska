@@ -30,7 +30,144 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link href="assets/css/theme.css" rel="stylesheet" />
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+        /* General Styles */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            margin-bottom: 15px;
+        }
 
+        .section-subtitle {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #007bff, #ff6b6b);
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+
+        /* Journey Card Styles */
+        .journey-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .price-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .btn-details {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 15px;
+            font-size: 0.85rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-details:hover {
+            background: #0056b3;
+        }
+
+        /* Section-Specific Styles */
+        .card-img-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .bg-voyage-gradient {
+            background: linear-gradient(to right, #007bff, #ff6b6b);
+        }
+
+        .fs-1 {
+            font-size: 1.5rem;
+        }
+
+        .fs-md-2 {
+            font-size: 2rem;
+        }
+
+        .text-light {
+            color: #fff;
+        }
+
+        .btn-primary-custom {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            background: #0056b3;
+        }
+    </style>
   </head>
 
 
@@ -205,106 +342,105 @@
 </section>
 
 
-      <section class="py-7 overflow-hidden">
-        <div class="container bg-offcanvas-gray">
-          <div class="row gx-2">
-            <div class="col-sm-6 col-lg-4 order-1 order-lg-0 gy-2 gy-lg-0">
-              <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="assets/img/gallery/sky-the-limit.png" height="375" alt="..." />
-                <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                  <div class="mt-auto px-4">
-                    <h3 class="fs-1 fs-md-2 text-white">Sky the Limit</h3>
-                    <div class="d-flex align-items-center justify-content-start"><span class="text-light fs--1 me-1"><i class="fas fa-map-marker-alt"></i></span><span class="text-light me-3">Manali</span><span class="text-light fs--1 me-1"><i class="fas fa-calendar"></i></span><span class="text-light">4 days</span></div>
-                    <h1 class="my-2 text-light fw-bolder fs-4"><span>$175</span><span class="text-light fs--1 fw-normal">/Per person</span></h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
+       <!-- Main Journey Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h1 class="section-title">Unforgettable <span style="color: #007bff;">Journeys</span></h1>
+                <p class="section-subtitle">Handcrafted experiences for your next adventure</p>
+                <div class="divider"></div>
             </div>
-            <div class="col-sm-6 col-lg-4 order-2 order-lg-0 gy-2 gy-lg-0">
-              <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="assets/img/gallery/beyond-the-blues.png" height="375" alt="..." />
-                <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                  <div class="mt-auto px-4">
-                    <h3 class="fs-1 fs-md-2 text-white">Beyond the Blues</h3>
-                    <div class="d-flex align-items-center justify-content-start"><span class="text-light fs--1 me-1"><i class="fas fa-map-marker-alt"></i></span><span class="text-light me-3">Maldives</span><span class="text-light fs--1 me-1"><i class="fas fa-calendar"></i></span><span class="text-light">4 days</span></div>
-                    <h1 class="my-2 text-light fw-bolder fs-4"><span>$175</span><span class="text-light fs--1 fw-normal">/Per person</span></h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4">
-              <div class="bg-primary-gradient h-100 bg-offcanvas-right">
-                <div class="row g-0 h-100">
-                  <div class="col-12 h-100">
-                    <div class="d-flex flex-column justify-content-center h-100 text-light ps-4 ps-xl-5 py-5 py-lg-0"><img class="mb-5" src="assets/img/icons/icon-gift-box.svg" width="58" alt="..." />
-                      <h2 class="mb-2 text-light">popular Packages</h2>
-                      <p>Choose the most popular bundles among <br class="d-none d-xl-block" />our current ones.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 gy-2">
-              <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="assets/img/gallery/green.png" height="375" alt="..." />
-                <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                  <div class="mt-auto px-4">
-                    <h3 class="fs-1 fs-md-2 text-white">Within the Gren</h3>
-                    <div class="d-flex align-items-center justify-content-start"><span class="text-light fs--1 me-1"><i class="fas fa-map-marker-alt"></i></span><span class="text-light me-3">Phillipines</span><span class="text-light fs--1 me-1"><i class="fas fa-calendar"></i></span><span class="text-light">4 days</span></div>
-                    <h1 class="my-2 text-light fw-bolder fs-4"><span>$175</span><span class="text-light fs--1 fw-normal">/Per person</span></h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 gy-2">
-              <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="assets/img/gallery/queens-gambit.png" height="375" alt="..." />
-                <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                  <div class="mt-auto px-4">
-                    <h3 class="fs-1 fs-md-2 text-white">Queens Gambit</h3>
-                    <div class="d-flex align-items-center justify-content-start"><span class="text-light fs--1 me-1"><i class="fas fa-map-marker-alt"></i></span><span class="text-light me-3">London</span><span class="text-light fs--1 me-1"><i class="fas fa-calendar"></i></span><span class="text-light">4 days</span></div>
-                    <h1 class="my-2 text-light fw-bolder fs-4"><span>$175</span><span class="text-light fs--1 fw-normal">/Per person</span></h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 gy-2">
-              <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="assets/img/gallery/canals.png" height="375" alt="..." />
-                <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                  <div class="mt-auto px-4">
-                    <h3 class="fs-1 fs-md-2 text-white">City of canals</h3>
-                    <div class="d-flex align-items-center justify-content-start"><span class="text-light fs--1 me-1"><i class="fas fa-map-marker-alt"></i></span><span class="text-light me-3">Maldives</span><span class="text-light fs--1 me-1"><i class="fas fa-calendar"></i></span><span class="text-light">4 days</span></div>
-                    <h1 class="my-2 text-light fw-bolder fs-4"><span>$175</span><span class="text-light fs--1 fw-normal">/Per person</span></h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-            <div class="col-12 col-lg-8 gy-2 order-3 order-lg-0">
-              <div class="bg-secondary-gradient h-100">
-                <div class="row h-100">
-                  <div class="col-12">
-                    <div class="d-flex flex-column flex-center h-100 text-light p-4 p-sm-6 p-md-8 p-lg-0">
-                      <p class="fs-1 px-3 mb-5">Most exclusive packages are ready <br class="d-none d-xl-block" />for you. It's only a click away!</p><a class="btn btn-lg text-light fs-1" href="#!" role="button">Click to view more
-                        <svg class="bi bi-arrow-right-circle ms-7" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"></path>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 gy-2">
-              <div class="card card-span h-100 text-white"><img class="img-fluid h-100 w-100" src="assets/img/gallery/mountain-venture.png" height="375" alt="..." />
-                <div class="card-img-overlay ps-0 d-flex flex-column justify-content-between bg-voyage-gradient">
-                  <div class="mt-auto px-4">
-                    <h3 class="fs-1 fs-md-2 text-white">Mountain Venture</h3>
-                    <div class="d-flex align-items-center justify-content-start"><span class="text-light fs--1 me-1"><i class="fas fa-map-marker-alt"></i></span><span class="text-light me-3">Maldives</span><span class="text-light fs--1 me-1"><i class="fas fa-calendar"></i></span><span class="text-light">4 days</span></div>
-                    <h1 class="my-2 text-light fw-bolder fs-4"><span>$175</span><span class="text-light fs--1 fw-normal">/Per person</span></h1>
-                  </div>
-                </div><a class="stretched-link" href="#!"></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
 
+        <div class="row g-4">
+            <!-- Journey 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="journey-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Barot Valley to Bir">
+                        <div class="flag-badge">
+                            <img src="https://flagcdn.com/w20/in.png" alt="India" width="20" height="12">
+                        </div>
+                        <div class="availability-badge">Availability: 31 Oct 2025</div>
+                        <div class="duration-badge">2N / 3D</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Barot Valley to Bir</h5>
+                        <p class="card-country">India</p>
+                        <div class="price-section">
+                            <div>
+                                <div class="price">₹6,999</div>
+                                <div class="price-label">per person</div>
+                            </div>
+                            <button class="btn btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Journey 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="journey-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Kerala Backwaters">
+                        <div class="flag-badge">
+                            <img src="https://flagcdn.com/w20/in.png" alt="India" width="20" height="12">
+                        </div>
+                        <div class="availability-badge">Availability: 23 Oct 2025</div>
+                        <div class="duration-badge">3N / 4D</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Kerala – The Backwater Pa...</h5>
+                        <p class="card-country">India</p>
+                        <div class="price-section">
+                            <div>
+                                <div class="price">₹11,999</div>
+                                <div class="price-label">per person</div>
+                            </div>
+                            <button class="btn btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="journey-card">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Lakshadweep">
+                        <div class="flag-badge">
+                            <img src="https://flagcdn.com/w20/in.png" alt="India" width="20" height="12">
+                        </div>
+                        <div class="availability-badge">Availability: 23 Oct 2025</div>
+                        <div class="duration-badge">5N / 6D</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lakshadweep Paradise</h5>
+                        <p class="card-country">India</p>
+                        <div class="price-section">
+                            <div>
+                                <div class="price">₹15,999</div>
+                                <div class="price-label">per person</div>
+                            </div>
+                            <button class="btn btn-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popular Packages Section -->
+            <!-- <div class="col-12">
+                <div class="bg-voyage-gradient py-5 text-light text-center">
+                    <h2 class="section-title-popular">Popular Packages</h2>
+                    <p>Explore the most popular travel packages</p>
+                    <button class="btn btn-primary-custom">Click to view more</button>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       <!-- ============================================-->
 
  
